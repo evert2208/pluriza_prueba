@@ -1,0 +1,15 @@
+.navbar {
+    padding: 0.6rem;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        @media (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+        }
+    }
+}
