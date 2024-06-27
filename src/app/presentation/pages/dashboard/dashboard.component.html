@@ -1,1 +1,9 @@
-<p>dashboard works!</p>
+<div class="container">
+    <h2>Dashboard</h2>
+    <div class="row">
+        <div class="col">
+            <app-busqueda (searchChange)="search($event)"></app-busqueda>
+            <app-lista-user [data]="users" [header]="header" [search]="searchName"></app-lista-user>
+        </div>
+    </div>
+</div>

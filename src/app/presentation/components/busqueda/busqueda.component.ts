@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-busqueda',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./busqueda.component.scss']
 })
 export class BusquedaComponent {
+  @Output() searchChange = new EventEmitter<string>();
+  searchName: string = '';
+
+  onSearch(search: string) {
+    this.searchName = search;
+    this.searchChange.emit(search);
+  }
 
 }

@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './presentation/pages/dashboard/dashboard.component';
-import { BusquedaComponent } from './presentation/components/busqueda/busqueda.component';
-import { ListaUserComponent } from './presentation/components/lista-user/lista-user.component';
-import { NavbarComponent } from './presentation/shared/navbar/navbar.component';
+
+import { NavbarComponent } from './presentation/components/layouts/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    BusquedaComponent,
-    ListaUserComponent,
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
