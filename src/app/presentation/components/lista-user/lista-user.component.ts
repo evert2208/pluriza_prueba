@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListaUserComponent implements OnInit {
   @Input() data: any[]=[];
-  @Input() header: any[]=[];
+  @Input() header: string[]=[];
   @Input() search: string='';
   ngOnInit(): void {
 

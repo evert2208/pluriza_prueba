@@ -11,7 +11,7 @@ export class BusquedaComponent {
 
   onSearch(search: string) {
     this.searchName = search;
-    this.searchChange.emit(search);
+    this.searchChange.emit( this.searchName);
   }
 
 }

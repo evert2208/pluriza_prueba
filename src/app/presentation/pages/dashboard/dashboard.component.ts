@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { User } from 'src/app/core/interfaces/user.interface';
-import { DashboardService } from 'src/app/infraestructure/services/dashboard.service';
+import { DashboardService } from '../../../../../src/app/infraestructure/services/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',

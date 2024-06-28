@@ -26,6 +26,9 @@
     "types": [
   "jest"
 ],
+// "paths": {
+//   "src/*": ["src/*"]
+// },
 "esModuleInterop": true
   },
   "angularCompilerOptions": {
