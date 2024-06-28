@@ -16,18 +16,17 @@ export class DashboardComponent implements OnInit {
   constructor(private _dashService: DashboardService,
     private metaService: Meta, private tituloService: Title,
   ) {
-
-  }
-  ngOnInit(): void {
-    this.getAllUsers();
     this.tituloService.setTitle('Dashboard');
-this.metaService.addTags([
+    this.metaService.addTags([
   { name: 'description', content: 'Dashboard para pluriza' },
   { name: 'keywords', content: 'pluriza, dashboard, usuarios, usuario, tabla, angular, prueba' },
   { property: 'og:title', content: 'Dashboard' },
   { property: 'og:description', content: 'Dashboard para pluriza' },
 ]);
 
+  }
+  ngOnInit(): void {
+    this.getAllUsers();
   }
 search(search: string){
 this.searchName=search;
@@ -36,8 +35,6 @@ this.searchName=search;
     this._dashService.getAllUsers().subscribe(
       resp => {
         this.users=resp;
-
-        console.log(this.users);
       }
      )
   }
